@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #F3E9DF; /* warmer sand */
+  --text: #1F1F1F;
+  --brass: #B39470; /* champagne brass (warmer) */
+}
+
+html, body {
+  background: var(--bg);
+  color: var(--text);
+}
+
+.card {
+  @apply bg-white/90 border border-sand-200 rounded-2xl shadow-soft;
+}
+.pill {
+  @apply rounded-2xl focus:ring-2 focus:ring-[var(--brass)];
+}
+.gradient-title {
+  background-image: linear-gradient(135deg, var(--brass), #E6CFAE 60%, #3A332B 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
